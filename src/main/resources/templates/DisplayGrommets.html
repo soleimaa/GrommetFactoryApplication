@@ -2,9 +2,18 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Grommet List</title>
+    <link rel="stylesheet" th:href="@{style.css}">
 </head>
 <body>
+<th:block th:each="g: ${grommetList}">
+
+    <div class="grommet" th:text="${g.symbol}" th:style="'background-color:' + ${g.color}"></div>
+
+
+
+
+</th:block>
 
 </body>
 </html>
